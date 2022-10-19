@@ -6,7 +6,7 @@ from django.db import models
 class Artiste(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
-    like = models.CharField(max_length=255)
+    age = models.IntegerField(default=0)
     songs = models.ForeignKey("Song", on_delete=models.CASCADE)
     
     
